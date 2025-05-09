@@ -1,5 +1,5 @@
-package com.example.weatherapp.forecast;
-import com.example.weatherapp.weatherDataModel.City;
+package com.example.weatherapp.model;
+import com.example.weatherapp.forecast.ForecastItem;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
@@ -21,4 +21,5 @@ public class ForecastResponse {
     public int getCnt() { return cnt; }
     public List<ForecastItem> getList() { return list; }
     public City getCity() { return city; }
+
 }

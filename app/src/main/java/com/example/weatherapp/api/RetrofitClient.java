@@ -13,14 +13,12 @@ public class RetrofitClient {
                 .build();
         openWeatherApiService = retrofit.create(OpenWeatherApiService.class);
     }
-
     public static synchronized RetrofitClient getInstance() {
         if (instance == null) {
             instance = new RetrofitClient();
         }
         return instance;
     }
-
     public OpenWeatherApiService getOpenWeatherApiService() {
         return openWeatherApiService;
     }

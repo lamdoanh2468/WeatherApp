@@ -1,8 +1,8 @@
 package com.example.weatherapp.forecast;
-import com.example.weatherapp.weatherDataModel.Clouds;
-import com.example.weatherapp.weatherDataModel.Main;
-import com.example.weatherapp.weatherDataModel.Weather;
-import com.example.weatherapp.weatherDataModel.Wind;
+import com.example.weatherapp.model.Clouds;
+import com.example.weatherapp.model.Main;
+import com.example.weatherapp.model.Weather;
+import com.example.weatherapp.model.Wind;
 import com.google.gson.annotations.SerializedName;
 import java.util.List;
 public class ForecastItem {

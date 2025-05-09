@@ -1,5 +1,4 @@
-package com.example.weatherapp;
-import com.example.weatherapp.weatherDataModel.*;
+package com.example.weatherapp.model;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
