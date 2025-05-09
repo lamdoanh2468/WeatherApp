@@ -33,7 +33,12 @@ android {
     sourceSets {
         getByName("main") {
             java {
-                srcDirs("src\\main\\java", "src\\main\\java\\WeatherDataModel")
+                srcDirs("src\\main\\java", "src\\main\\java\\WeatherDataModel",
+                    "src\\main\\java",
+                    "src\\main\\java\\WeatherDataModel", "src\\main\\java", "src\\main\\java\\com.example.weatherapp\\WeatherDataModel",
+                    "src\\main\\java",
+                    "src\\main\\java\\WeatherDataModel"
+                )
             }
         }
     }

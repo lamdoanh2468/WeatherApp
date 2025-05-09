@@ -1,8 +1,10 @@
 package com.example.weatherapp;
-
+import com.example.weatherapp.weatherDataModel.*;
 import com.google.gson.annotations.SerializedName;
 
-public class WeatherData {
+import java.util.List;
+
+public class CurrentWeatherResponse {
     @SerializedName("coord")
     private Coord coord;
     @SerializedName("weather")
