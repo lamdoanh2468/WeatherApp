@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView forecastRecView;
     private LocationHelper locationHelper;
     private ForecastAdapter forecastAdapter;
-    private final String OPENWEATHER_API_KEY = "88b25bb0c905f69e674b77d0b30efd97";
+    private final String OPENWEATHER_API_KEY = "1acfe1051af8a21a693760b0291b9ac4";
     // Request launcher cho quyền truy cập vị trí
     private ActivityResultLauncher<String[]> requestPermissionLauncher;
 
@@ -245,6 +245,7 @@ public class MainActivity extends AppCompatActivity {
         // Tải icon thời tiết bằng Glide
         String iconCode = weatherData.getWeather().get(0).getIcon();
         String iconUrl = "https://openweathermap.org/img/wn/" + iconCode + "@2x.png";
+        Log.d("TAG", "Loading icon from URL: " + iconUrl);
         Glide.with(this)
                 .load(iconUrl)
                 .into(weatherIcon);

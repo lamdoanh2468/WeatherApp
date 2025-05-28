@@ -20,7 +20,7 @@ public interface OpenWeatherApiService {
             @Query("lat") double lat,
             @Query("lon") double lon,
             @Query("appid") String apiKey,
-            @Query("units") String units, // Đơn vị đo: metric (Celsius), imperial (Fahrenheit)
+            @Query("units") String units, // Đơn vị  đo: metric (Celsius), imperial (Fahrenheit)
             @Query("lang") String lang // Ngôn ngữ: tiếng Việt
     );
 }

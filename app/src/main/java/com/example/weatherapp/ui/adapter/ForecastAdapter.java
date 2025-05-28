@@ -43,7 +43,7 @@ public class ForecastAdapter extends RecyclerView.Adapter<ForecastViewHolder> {
         // Tải icon thời tiết sử dụng Glide
         String iconUrl = "https://openweathermap.org/img/wn/" + forecastItem.getWeather().get(0).getIcon() + "@2x.png";
         Glide.with(holder.itemView.getContext())
-                .load(iconUrl)
+                .load(iconUrl). error(R.drawable.ic_cloudy)
                 .into(holder.iconImage);
 
         // Hiển thị nhiệt độ
