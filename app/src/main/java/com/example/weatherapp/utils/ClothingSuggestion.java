@@ -1,4 +1,4 @@
-package com.example.weatherapp;
+package com.example.weatherapp.utils;
 
 public class ClothingSuggestion {
     private static final double HOT_TEMPERATURE = 30.0; // Nhiệt độ nóng (Celsius)

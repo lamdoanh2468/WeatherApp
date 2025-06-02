@@ -1,81 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_weather"
-    android:padding="16dp">
+    android:orientation="vertical"
+    android:background="@drawable/bg_weather">
 
-    <!-- Vị trí -->
-    <TextView
-        android:id="@+id/locationText"
-        android:layout_width="wrap_content"
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hà Nội"
-        android:textSize="28sp"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
+        android:background="#80000000"
+        app:tabTextColor="#FFFFFF"
+        app:tabSelectedTextColor="#FFFFFF"
+        app:tabIndicatorColor="#FFFFFF"
+        app:tabMode="fixed"
+        app:tabGravity="fill" />
 
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
-    <!-- Ngày hiện tại -->
-    <TextView
-        android:id="@+id/dateText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Thứ Tư, 9/5"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
-        android:layout_below="@id/locationText"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="4dp" />
-
-    <!-- Icon thời tiết -->
-    <ImageView
-        android:id="@+id/weatherIcon"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_below="@id/dateText"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/ic_cloudy"
-        android:visibility="visible"
-        tools:visibility="visible" />
-
-    <!-- Nhiệt độ -->
-    <TextView
-        android:id="@+id/temperatureText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="28°C"
-        android:textColor="#FFFFFF"
-        android:textSize="48sp"
-        android:textStyle="bold"
-        android:layout_below="@id/weatherIcon"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp" />
-
-    <!-- Mô tả -->
-    <TextView
-        android:id="@+id/descriptionText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Trời nhiều mây"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        android:layout_below="@id/temperatureText"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="4dp" />
-
-    <!-- Dự báo 5 ngày -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/forecastRecView"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_below="@id/descriptionText"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="32dp" />
-
-</RelativeLayout>
+</LinearLayout>
