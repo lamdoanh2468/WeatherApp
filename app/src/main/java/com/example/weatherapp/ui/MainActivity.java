@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
         // Thiết lập TabLayout
         tabLayout = findViewById(R.id.tabLayout);
         new TabLayoutMediator(tabLayout, viewPager, (tab, position) -> {
-            tab.setText(position == 0 ? "Dự báo" : "Đề xuất trang phục");
+            tab.setText(position == 0 ? "Dự báo thời tiết" : "Đề xuất trang phục");
         }).attach();
 
         //Lưu trữ dữ liệu thời tiết hiện tại 
