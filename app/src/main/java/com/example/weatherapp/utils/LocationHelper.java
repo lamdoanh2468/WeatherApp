@@ -43,5 +43,4 @@ public class LocationHelper {
         }
         return fusedLocationClient.getCurrentLocation(Priority.PRIORITY_HIGH_ACCURACY, null);
     }
-
 }
